@@ -56,13 +56,13 @@
 // |BTCLR  | BT1  | BT2   |  BT3  |  BT4 |  BT5 |                                  |  F1  |  F2   |  F3   |  F4  |  F5   |  F6   |
 // |       |OUT_BT|OUT_USB|OUT_TOG|      |      |        |                   |       |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
 // |       |  END |  HOME |QWERTY |DVORAK|      |        |                   |       |  PGUP|       |       |      |       |       |
-// |       |      |       |       |      |      |        |       | |PSCR(ALT)|       |  PGDN|       |       |      |       |       |
+// |       |      |       |       |      |      |        |       | |         |       |  PGDN|       |       |      |       |       |
 // |       |      |       |       |      |               |       | |         |              |       |       |      |       |       |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 &kp F6      &kp F7  &kp F8   &kp F9   &kp F10  &kp F11
 &kp KP_NUM &out OUT_BLE &out OUT_USB &out OUT_TOG  &trans  &trans  &trans                &trans   &kp F7      &kp F8  &kp F9   &kp F10  &kp F11  &kp F12
 &trans     &kp END   &kp HOME &to 1  &to 0   &trans &trans                &trans   &kp PG_UP   &trans  &trans   &trans   &trans   &trans
-&trans     &trans &trans &trans  &trans &trans &trans &trans    &mt PSRN RA(PSCRN)  &trans &kp PG_DN   &trans  &trans   &trans   &trans   &trans
+&trans     &trans &trans &trans  &trans &trans &trans &trans    &trans  &trans &kp PG_DN   &trans  &trans   &trans   &trans   &trans
 &trans     &trans &trans &trans &trans &trans &trans           &trans     &trans          &trans  &trans   &trans   &trans   &trans
             >;
 
@@ -74,13 +74,13 @@
 // |BTCLR  | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                                  |      |       |       |      |       | RESET |
 // |       |     |     |      |      |      |        |                   |       |      |NUMLOCK|   7   |   8  |   9   |BLOADER|
 // |       |     |     |      |      |      |        |                   |       |      |   +   |   4   |   5  |   6   | CALC  |
-// |       |     |     |      |      |      |        |       | |PSCR(ALT)|       |      |   -   |   1   |   2  |   3   |       |
+// |       |     |     |      |      |      |        |       | |         |       |      |   -   |   1   |   2  |   3   |       |
 // |       |     |     |      |      |               |       | |         |              |       |   0   |   .  |   =   |       |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                          &trans &trans       &trans    &trans     &trans       &sys_reset
 &trans   &trans        &trans        &trans       &trans      &trans  &trans                 &trans  &trans &kp KP_NUM   &kp KP_N7 &kp KP_N8  &kp KP_N9    &bootloader
 &trans   &trans        &trans        &trans       &trans      &trans  &trans                 &trans  &trans &kp KP_PLUS  &kp KP_N4 &kp KP_N5  &kp KP_N6    &kp C_AL_CALC
-&trans   &trans        &trans        &trans       &trans      &trans  &trans &trans  &mt PSRN RA(PSCRN)  &trans  &trans &kp KP_MINUS &kp KP_N1 &kp KP_N2  &kp KP_N3    &trans
+&trans   &trans        &trans        &trans       &trans      &trans  &trans &trans  &trans  &trans  &trans &kp KP_MINUS &kp KP_N1 &kp KP_N2  &kp KP_N3    &trans
 &trans   &trans        &trans        &trans       &trans         &trans      &trans  &trans      &trans     &trans       &kp KP_N0 &kp KP_DOT &kp KP_ENTER &trans
             >;
 
